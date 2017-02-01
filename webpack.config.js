@@ -5,6 +5,7 @@ const webpack = require('webpack')
 const WebpackNotifierPlugin = require('webpack-notifier')
 
 module.exports = {
+  devtool: 'source-map',
   entry: [
     './src/client/index'
   ],
