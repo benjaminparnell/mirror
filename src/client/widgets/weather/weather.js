@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { getWeather } from './actions'
+import { ONE_MINUTE } from '../../constants'
 
 class Weather extends React.Component {
   componentDidMount () {
@@ -20,14 +21,15 @@ class Weather extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-  return {
-    weather: state.weather.weather
-  }
+  return { ...state.weather }
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
     getWeather: () => {
+      setInterval(() => {
+        dispatch(getWeather())
+      }, ONE_MINUTE)
       dispatch(getWeather())
     }
   }

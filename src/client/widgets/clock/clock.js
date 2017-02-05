@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { updateTime } from './actions'
+import { ONE_SECOND } from '../../constants'
 import styled from 'styled-components'
 
 const Title = styled.h1`
@@ -22,9 +23,7 @@ class Clock extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-  return {
-    time: state.clock.time
-  }
+  return { ...state.clock }
 }
 
 const mapDispatchToProps = (dispatch) => {
@@ -32,7 +31,8 @@ const mapDispatchToProps = (dispatch) => {
     startClock: () => {
       setInterval(() => {
         dispatch(updateTime())
-      }, 1000)
+      }, ONE_SECOND)
+      dispatch(updateTime())
     }
   }
 }

@@ -44,7 +44,7 @@ module.exports = {
       { test: /\.js$/,
         loader: 'babel-loader',
         query: {
-          plugins: [ 'lodash' ],
+          plugins: [ 'lodash', 'transform-object-rest-spread' ],
           presets: [[ 'env', { 'targets': { 'chrome': 56 }, 'debug': true } ], 'es2015', 'react']
         }
       },
