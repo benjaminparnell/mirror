@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { getWeather } from './actions'
-import { ONE_MINUTE } from '../../constants'
+import timekeeper from '../../lib/timekeeper'
 
 class Weather extends React.Component {
   componentDidMount () {
@@ -27,9 +27,9 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     getWeather: () => {
-      setInterval(() => {
+      timekeeper.every('1 minute', () => {
         dispatch(getWeather())
-      }, ONE_MINUTE)
+      })
       dispatch(getWeather())
     }
   }

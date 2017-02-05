@@ -1,8 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { updateTime } from './actions'
-import { ONE_SECOND } from '../../constants'
 import styled from 'styled-components'
+import timekeeper from '../../lib/timekeeper'
 
 const Title = styled.h1`
   font-size: 4.5em;
@@ -29,9 +29,9 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     startClock: () => {
-      setInterval(() => {
+      timekeeper.every('1 second', () => {
         dispatch(updateTime())
-      }, ONE_SECOND)
+      })
       dispatch(updateTime())
     }
   }

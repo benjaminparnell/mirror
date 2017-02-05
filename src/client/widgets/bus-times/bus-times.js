@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { getBusTimes } from './actions'
 import differenceInMinutes from 'date-fns/difference_in_minutes'
-import { ONE_MINUTE } from '../../constants'
+import timekeeper from '../../lib/timekeeper'
 
 class BusTimes extends React.Component {
   componentDidMount () {
@@ -35,9 +35,9 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     getBusTimes: () => {
-      setInterval(() => {
+      timekeeper.every('1 minute', () => {
         dispatch(getBusTimes())
-      }, ONE_MINUTE)
+      })
       dispatch(getBusTimes())
     }
   }
