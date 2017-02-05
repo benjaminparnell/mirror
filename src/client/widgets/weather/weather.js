@@ -14,7 +14,7 @@ class Weather extends React.Component {
     return (
       <div className='widget'>
         <h1>{weather[0].main}</h1>
-        <img src={`http://openweathermap.org/img/w/${weather[0].icon}.png`} />
+        <i className={`owf owf-${weather[0].id}`} />
       </div>
     )
   }
