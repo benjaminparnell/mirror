@@ -17,7 +17,7 @@ class BusTimes extends React.Component {
           return schedule.map((item, index) => {
             return (
               <div className='schedule-item' key={index}>
-                <h1>{item.busService} in {differenceInMinutes(new Date(item.time), new Date())}</h1>
+                <h1>Number {item.busService} in {differenceInMinutes(new Date(item.time), new Date())} minutes</h1>
               </div>
             )
           })
