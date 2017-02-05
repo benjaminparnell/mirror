@@ -45,7 +45,7 @@ module.exports = {
         loader: 'babel-loader',
         query: {
           plugins: [ 'lodash' ],
-          presets: [[ 'env', { 'targets': { 'chrome': 55 }, 'debug': true } ], 'es2015', 'react']
+          presets: [[ 'env', { 'targets': { 'chrome': 56 }, 'debug': true } ], 'es2015', 'react']
         }
       },
       { test: /\.css$/,
