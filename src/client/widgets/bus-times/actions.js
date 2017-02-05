@@ -1,6 +1,6 @@
 export const UPDATE_BUS_TIMES = 'UPDATE_BUS_TIMES'
 
-const request = require('superagent')
+import request from 'superagent'
 
 export function getBusTimes () {
   return (dispatch) => {
