@@ -57,3 +57,5 @@ public/js/bundle.js
 public/js/bundle.js.map
 
 .env
+
+*.vim
