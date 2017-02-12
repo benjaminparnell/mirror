@@ -1,0 +1,12 @@
+{
+  "collectCoverage": true,
+  "coverageDirectory": "coverage",
+  "collectCoverageFrom": [
+    "**/*.js",
+    "!**/node_modules/**",
+    "!**/coverage/**",
+    "!**/public/js/**",
+    "!**/webpack.**"
+  ],
+  "coverageReporters": [ "lcov" ]
+}

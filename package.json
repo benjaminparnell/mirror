@@ -6,6 +6,7 @@
   "scripts": {
     "pretest": "standard",
     "test": "jest",
+    "coverage": "jest -c jest-coverage-config.json",
     "build": "webpack --progress --config webpack-prod.config.js"
   },
   "repository": {
