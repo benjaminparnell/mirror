@@ -5,7 +5,7 @@ import request from 'superagent'
 export function getBusTimes () {
   return (dispatch) => {
     request
-      .get('/bus-times/schedule')
+      .get('http://mirror.benp.space/bus-times/schedule')
       .end((err, res) => {
         if (err) throw err
         dispatch(updateBusTimes(res.body))

@@ -28,9 +28,11 @@
     "globals": [
       "describe",
       "it",
-      "expect"
+      "expect",
+      "afterEach"
     ]
   },
+  "jest": {},
   "dependencies": {
     "body-parser": "^1.16.0",
     "compression": "^1.6.2",
@@ -66,7 +68,8 @@
     "enzyme": "^2.7.1",
     "jest": "^18.1.0",
     "lodash-webpack-plugin": "^0.11.0",
-    "sinon": "^1.17.7",
+    "mockdate": "^2.0.1",
+    "nock": "^9.0.5",
     "standard": "^8.6.0",
     "style-loader": "^0.13.1",
     "webpack": "^1.14.0",

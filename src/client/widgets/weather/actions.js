@@ -5,7 +5,7 @@ import request from 'superagent'
 export function getWeather () {
   return (dispatch) => {
     request
-      .get('/weather')
+      .get('http://mirror.benp.space/weather')
       .end((err, res) => {
         if (err) throw err
         dispatch(updateWeather(res.body.weather))

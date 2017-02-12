@@ -3,5 +3,6 @@
     [ "env", { "targets": { "chrome": 56 } } ],
     "es2015",
     "react"
-  ]
+  ],
+  "plugins": [ "transform-object-rest-spread" ]
 }
